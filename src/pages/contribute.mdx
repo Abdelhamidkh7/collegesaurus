@@ -37,12 +37,32 @@ school that should be on the site, you can add it directly. You'll
 download a small template, fill it in, and upload it through the
 form.
 
-- A new **scholarship** needs two files: `info.docx` (English) and
-  `info.ar.docx` (Arabic).
+- A new **scholarship** needs two files — `info.docx` (English) and
+  `info.ar.docx` (Arabic). These hold the prose page itself —
+  overview, requirements, deadlines, and contacts — one per language.
   Templates: [scholarship templates folder](https://drive.google.com/drive/folders/1hGsGdrWj-LZht2INGb-77JBWE3bHap1b).
-- A new **university** needs four files: `info.docx`,
-  `info.ar.docx`, `majors.xlsx`, and `majors.ar.xlsx`.
+- A new **university** needs four files — `info.docx`,
+  `info.ar.docx`, `majors.xlsx`, and `majors.ar.xlsx`. The `info.*`
+  files are the prose page (English and Arabic); the `majors.*` files
+  are the spreadsheet of degree programmes, one row per major
+  (English and Arabic).
   Templates: [university templates folder](https://drive.google.com/drive/folders/16z_utAOa9MFFfdaeX_eaivw8Ga6OryK0).
+
+### Template structure is strict
+
+The nightly sync parses these files automatically, so don't reshape
+the templates.
+
+- Every `info.docx` starts with a `# Metadata` H1 followed by a
+  key/value table.
+- For **university** `info.docx`, the H1 sections must appear in
+  this exact order: `Introduction`, `Application`, `Tuition`,
+  `Scholarships`, `Requirements`, `Contacts`.
+- For **scholarship** `info.docx`, only the `# Metadata` block is
+  fixed. You can rename, reorder, add, or remove the other H1
+  sections.
+- `majors.xlsx` must keep its column headers. `program`, `degree`,
+  and `faculty` are required.
 
 > Uploading files requires you to sign in with Google.
 
