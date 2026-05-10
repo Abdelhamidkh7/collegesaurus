@@ -50,13 +50,19 @@ form.
 
 ### Template structure is strict
 
-The nightly sync parses these files, so don't reshape the templates.
-Each `info.docx` starts with a `# Metadata` key/value table; for
-universities, the H1 sections must be `Introduction`, `Application`,
-`Tuition`, `Scholarships`, `Requirements`, `Contacts` — in that
-order. `majors.xlsx` must keep its column headers (`program`,
-`degree`, `faculty` are required). Scholarship `info.docx` is
-flexible past `Metadata`.
+The nightly sync parses these files automatically, so don't reshape
+the templates.
+
+- Every `info.docx` starts with a `# Metadata` H1 followed by a
+  key/value table.
+- For **university** `info.docx`, the H1 sections must appear in
+  this exact order: `Introduction`, `Application`, `Tuition`,
+  `Scholarships`, `Requirements`, `Contacts`.
+- For **scholarship** `info.docx`, only the `# Metadata` block is
+  fixed. You can rename, reorder, add, or remove the other H1
+  sections.
+- `majors.xlsx` must keep its column headers. `program`, `degree`,
+  and `faculty` are required.
 
 > Uploading files requires you to sign in with Google.
 

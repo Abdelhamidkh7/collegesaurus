@@ -50,13 +50,17 @@ description: كيف تساعد في إبقاء Collegesaurus دقيقًا — ت
 
 ### بنية القوالب صارمة
 
-السكربت الليلي يحلّل هذه الملفات، فلا تُغيِّر شكل القوالب. كل
-`info.docx` يبدأ بجدول `# Metadata` (مفتاح/قيمة)؛ في الجامعات يجب
-أن تأتي عناوين H1 بالترتيب التالي: `Introduction` ثم `Application`
-ثم `Tuition` ثم `Scholarships` ثم `Requirements` ثم `Contacts`.
-أمّا `majors.xlsx` فعليه الحفاظ على أسماء الأعمدة (`program` و
-`degree` و `faculty` مطلوبة). `info.docx` الخاص بالمنح مرن بعد قسم
-`Metadata`.
+السكربت الليلي يحلّل هذه الملفات تلقائيًا، فلا تُغيِّر شكل القوالب.
+
+- كل ملف `info.docx` يبدأ بعنوان رئيسي `# Metadata` يتبعه جدول
+  مفتاح/قيمة.
+- في `info.docx` الخاص بـ**الجامعات**، يجب أن تظهر عناوين H1
+  بهذا الترتيب تحديدًا: `Introduction` ثم `Application` ثم
+  `Tuition` ثم `Scholarships` ثم `Requirements` ثم `Contacts`.
+- في `info.docx` الخاص بـ**المنح**، قسم `# Metadata` وحده ثابت.
+  يمكنك إعادة تسمية باقي عناوين H1 أو ترتيبها أو إضافتها أو حذفها.
+- `majors.xlsx` عليه الحفاظ على أسماء الأعمدة. الأعمدة `program`
+  و `degree` و `faculty` مطلوبة.
 
 > رفع الملفات يستلزم تسجيل الدخول بحساب Google.
 
