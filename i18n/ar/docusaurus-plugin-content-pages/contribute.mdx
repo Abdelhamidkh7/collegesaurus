@@ -39,11 +39,24 @@ description: كيف تساعد في إبقاء Collegesaurus دقيقًا — ت
 عبر النموذج.
 
 - المنحة الجديدة تحتاج إلى ملفّين — `info.docx` (بالإنجليزية) و
-  `info.ar.docx` (بالعربية).
+  `info.ar.docx` (بالعربية). هذان الملفّان يحملان نصّ الصفحة نفسه —
+  نظرة عامّة، متطلّبات، مواعيد، وجهات اتصال — واحد لكل لغة.
   القوالب: [مجلّد قوالب المنح](https://drive.google.com/drive/folders/1hGsGdrWj-LZht2INGb-77JBWE3bHap1b).
 - الجامعة الجديدة تحتاج إلى أربعة ملفات — `info.docx`,
-  `info.ar.docx`, `majors.xlsx`, و `majors.ar.xlsx`.
+  `info.ar.docx`, `majors.xlsx`, و `majors.ar.xlsx`. ملفّا `info.*`
+  هما نصّ الصفحة (بالإنجليزية والعربية)، أمّا ملفّا `majors.*` فهما
+  جدول الاختصاصات/البرامج بصفّ لكل اختصاص (بالإنجليزية والعربية).
   القوالب: [مجلّد قوالب الجامعات](https://drive.google.com/drive/folders/16z_utAOa9MFFfdaeX_eaivw8Ga6OryK0).
+
+### بنية القوالب صارمة
+
+السكربت الليلي يحلّل هذه الملفات، فلا تُغيِّر شكل القوالب. كل
+`info.docx` يبدأ بجدول `# Metadata` (مفتاح/قيمة)؛ في الجامعات يجب
+أن تأتي عناوين H1 بالترتيب التالي: `Introduction` ثم `Application`
+ثم `Tuition` ثم `Scholarships` ثم `Requirements` ثم `Contacts`.
+أمّا `majors.xlsx` فعليه الحفاظ على أسماء الأعمدة (`program` و
+`degree` و `faculty` مطلوبة). `info.docx` الخاص بالمنح مرن بعد قسم
+`Metadata`.
 
 > رفع الملفات يستلزم تسجيل الدخول بحساب Google.
 
